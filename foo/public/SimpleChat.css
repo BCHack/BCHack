@@ -1,0 +1,32 @@
+body {
+	font-family: monospace;
+}
+
+h1 {
+	font-size: 24;
+	margin: 0;
+}
+
+h1, ul {
+	text-align: center;
+	text-decoration: dashed blue underline;
+}
+
+ul {
+	list-style-type: none;	
+}
+
+li, #time{
+	font-size: 16pt;
+	display: inline;
+}
+
+#chat-forum {
+	border: 1px solid black;
+}
+
+#game-area {
+	width: 500px;
+	height: 500px;
+	border: solid 2px black;
+}
