@@ -17,19 +17,24 @@
 	 */
 	function startGame() {
 		var game = document.getElementById("game-area");
-		timeStart();		
-		moveBlock();
+		timeStart();				
 	} 
 
 	/* 
 	 * Function that moves a block downward
 	 */
-	function moveBlock() {
+	function generateBlock() {
 		// creates the div block
 		var block = document.createElement("div");
 		block.className = "blocks";
-		block.style.left = Math.random() * 450 + "px";
-		document.getElementById("game-area").appendChild(block);
+
+		/* Keep track of the size of the game area */
+		var gameArea = document.getElementById("game-area");
+		var areaW = parseInt(window.getComputedStyle(gameArea).width)
+		var areaH = parseInt(window.getComputedStyle(gameArea).height);
+		block.style.left = Math.floor(Math.random() * (areaW -  50)) + "px";
+		block.style.top = 0 + "px";
+		document.getElementById("game-area").appendChild(block);	
 	}
 
 	function timeStart() {
@@ -46,7 +51,13 @@
 	 */
 	function changeTime() {
 		document.getElementById("timerCount").innerHTML = ++time + "s";
-
+		var blockList = document.querySelectorAll(".blocks");
+		if(time % 5 == 0) {
+			generateBlock();
+		}
+		for(var i = 0; i < blockList.length; i++) {		
+			blockList[i].style.top = parseInt(blockList[i].style.top) + 10 + 'px';
+		}		
 	}
 
 })();
