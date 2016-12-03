@@ -18,7 +18,19 @@
 	function startGame() {
 		var game = document.getElementById("game-area");
 		timeStart();		
+		moveBlock();
 	} 
+
+	/* 
+	 * Function that moves a block downward
+	 */
+	function moveBlock() {
+		// creates the div block
+		var block = document.createElement("div");
+		block.className = "blocks";
+		block.style.left = Math.random() * 450 + "px";
+		document.getElementById("game-area").appendChild(block);
+	}
 
 	function timeStart() {
 		if(timer == null)
@@ -34,7 +46,6 @@
 	 */
 	function changeTime() {
 		document.getElementById("timerCount").innerHTML = ++time + "s";
-
 
 	}
 

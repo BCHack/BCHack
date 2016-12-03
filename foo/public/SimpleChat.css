@@ -21,6 +21,18 @@ li, #time{
 	display: inline;
 }
 
+#game-area {
+	position: absolute;
+}
+
+/* Style for the blocks*/
+.blocks {
+	position: relative;
+	background-color: blue;
+	width: 50px;
+	height: 50px;
+}
+
 #chat-forum {
 	border: 1px solid black;
 }
@@ -29,4 +41,9 @@ li, #time{
 	width: 500px;
 	height: 500px;
 	border: solid 2px black;
+}
+
+.keyElement:hover {
+	opacity: 0.6;
+	cursor: pointer;
 }
