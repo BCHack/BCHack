@@ -28,6 +28,11 @@
 		var block = document.createElement("div");
 		block.className = "blocks";
 
+		// gives us numbers 1 - 3 
+		var num = Math.floor(Math.random() * 3 + 1);
+
+		if(num == 1) 
+			block.className += " fakeBlock";
 		/* Keep track of the size of the game area */
 		var gameArea = document.getElementById("game-area");
 		var areaW = parseInt(window.getComputedStyle(gameArea).width)
@@ -39,7 +44,7 @@
 
 	function timeStart() {
 		if(timer == null)
-				timer = setInterval(changeTime, 1000);
+				timer = setInterval(changeTime, 500);
 		else {
 			clearInterval(timer);
 			timer = null;

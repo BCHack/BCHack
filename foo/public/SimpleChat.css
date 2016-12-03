@@ -47,3 +47,11 @@ li, #time{
 	opacity: 0.6;
 	cursor: pointer;
 }
+
+.blocks:hover:not(.fakeBlock) {
+	background-color: red;
+}
+
+.fakeBlock:hover {
+	opacity: 0;
+}

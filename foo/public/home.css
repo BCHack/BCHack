@@ -1,0 +1,10 @@
+body {
+	background-color: black;	
+}
+
+.blocks {
+	width: 10px;
+	height: 10px;
+	background-color: lightgreen;
+	position: absolute;
+}

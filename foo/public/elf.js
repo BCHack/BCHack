@@ -197,5 +197,6 @@ function elfFireInitPage() {
 
 $(document).ready(function() {
     elfFireStart();
-    elfFireConfig();
+    // elfFireConfig();
+    elfFireInitPage();
 });
