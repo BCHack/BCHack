@@ -3,8 +3,29 @@ body {
 }
 
 .blocks {
-	width: 10px;
+	width: 1px;
 	height: 10px;
 	background-color: lightgreen;
 	position: absolute;
+}
+
+input {
+	border-radius: 25px;
+}
+
+#log-in {
+	margin: auto;
+}
+
+#container {
+	position: relative;
+}
+
+#character {
+	position: absolute;
+	background-color: red;
+	height: 25px;
+	width: 25px;
+	top: 0px;
+	left: 0px;
 }
